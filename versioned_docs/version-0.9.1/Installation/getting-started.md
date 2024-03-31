@@ -262,6 +262,7 @@ User=www-data
 Group=www-data
 Restart=always
 ExecStart=/usr/bin/php /var/www/controlpanel/artisan queue:work --sleep=3 --tries=3
+StartLimitBurst=0
 
 [Install]
 WantedBy=multi-user.target
